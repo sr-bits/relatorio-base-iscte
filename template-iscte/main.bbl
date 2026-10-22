@@ -1,0 +1,101 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{rfc4271}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=f7ac03bcff07914eede7449c1129d123}{%
+           family={Rekhter},
+           familyi={R\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=317adb20c6b3ea65befa45a219f6410d}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9db01b705ad7068e2dda4ddcd87b2cb5}{%
+           family={Hares},
+           familyi={H\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{45571e251442969f1560e3237d5e36c7}
+      \strng{fullhash}{b763dec0a67ac2774186b5d2ff0eabd2}
+      \strng{fullhashraw}{b763dec0a67ac2774186b5d2ff0eabd2}
+      \strng{bibnamehash}{b763dec0a67ac2774186b5d2ff0eabd2}
+      \strng{authorbibnamehash}{b763dec0a67ac2774186b5d2ff0eabd2}
+      \strng{authornamehash}{45571e251442969f1560e3237d5e36c7}
+      \strng{authorfullhash}{b763dec0a67ac2774186b5d2ff0eabd2}
+      \strng{authorfullhashraw}{b763dec0a67ac2774186b5d2ff0eabd2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 4271}
+      \field{title}{A Border Gateway Protocol 4 ({BGP-4})}
+      \field{urlday}{22}
+      \field{urlmonth}{10}
+      \field{urlyear}{2026}
+      \field{year}{2006}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.rfc-editor.org/rfc/rfc4271
+      \endverb
+      \verb{url}
+      \verb https://www.rfc-editor.org/rfc/rfc4271
+      \endverb
+    \endentry
+    \entry{kurose2021}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=940597b1d3215b2b17b93101036fbb5e}{%
+           family={Kurose},
+           familyi={K\bibinitperiod},
+           given={James\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=c2e119f22d4ef9df7cfb63c82975b459}{%
+           family={Ross},
+           familyi={R\bibinitperiod},
+           given={Keith\bibnamedelima W.},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{79b9c386af384b822481cee1fccbb76a}
+      \strng{fullhash}{79b9c386af384b822481cee1fccbb76a}
+      \strng{fullhashraw}{79b9c386af384b822481cee1fccbb76a}
+      \strng{bibnamehash}{79b9c386af384b822481cee1fccbb76a}
+      \strng{authorbibnamehash}{79b9c386af384b822481cee1fccbb76a}
+      \strng{authornamehash}{79b9c386af384b822481cee1fccbb76a}
+      \strng{authorfullhash}{79b9c386af384b822481cee1fccbb76a}
+      \strng{authorfullhashraw}{79b9c386af384b822481cee1fccbb76a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{8}
+      \field{title}{Computer Networking: A Top-Down Approach}
+      \field{year}{2021}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,51 @@
+% ============================================================================
+%  Modelo de relatório — Iscte-IUL
+%  Compilar SEMPRE este ficheiro (os restantes têm "% !TEX root = ../main.tex")
+% ============================================================================
+\documentclass[a4paper,11pt,oneside,openany]{report}
+
+\input{config/info}        % título, UC, autores, docente, datas  <-- editar
+\input{config/pacotes}     % pacotes
+\input{config/estilo}      % aspeto: cores, títulos, cabeçalhos, código, anexos
+\input{config/acronimos}   % lista de acrónimos                   <-- editar
+\addbibresource{referencias.bib}
+
+\begin{document}
+
+% ---------------------------------------------------------------------------
+%  Elementos pré-textuais — numeração romana (i, ii, iii, ...)
+% ---------------------------------------------------------------------------
+\input{pretextual/capa}
+
+\pagenumbering{roman}
+\pagestyle{plain}
+
+\input{pretextual/resumo}
+\input{pretextual/abstract}   % comentar se não for pedido abstract em inglês
+
+\tableofcontents
+\listoffigures                % comentar se não houver figuras
+\listoftables                 % comentar se não houver tabelas
+\lstlistoflistings            % comentar se não houver código
+\printacronimos               % comentar se não houver acrónimos
+
+% ---------------------------------------------------------------------------
+%  Corpo do relatório — numeração árabe (1, 2, 3, ...)
+% ---------------------------------------------------------------------------
+\iniciarcorpo
+
+\input{capitulos/01-introducao}
+\input{capitulos/02-desenvolvimento}
+\input{capitulos/03-conclusao}
+
+\printbibliography[heading=bibintoc, title={Referências}]
+
+% ---------------------------------------------------------------------------
+%  Anexos — capítulos A, B, C; páginas A-1, A-2, B-1, ...
+% ---------------------------------------------------------------------------
+\iniciaranexos
+
+\input{anexos/anexo-a}
+\input{anexos/anexo-b}
+
+\end{document}

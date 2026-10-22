@@ -1,0 +1,83 @@
+% !TEX root = ../main.tex
+\chapter{Desenvolvimento}
+\label{cap:desenvolvimento}
+
+Este capítulo serve também de \emph{cábula}: mostra como fazer cada elemento.
+Apagar ou substituir à vontade.
+
+\section{Figuras}
+
+As imagens ficam em \texttt{imagens/} e não é preciso escrever a pasta nem a
+extensão. Referência automática: \cref{fig:exemplo}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.6\linewidth]{example-image-a} % ex.: {topologia}
+  \caption{Legenda da figura}
+  \label{fig:exemplo}
+\end{figure}
+
+Duas figuras lado a lado (\cref{fig:lado-a,fig:lado-b}):
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{example-image-b}
+    \caption{Antes}
+    \label{fig:lado-a}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.45\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{example-image-c}
+    \caption{Depois}
+    \label{fig:lado-b}
+  \end{subfigure}
+  \caption{Comparação antes/depois}
+\end{figure}
+
+\section{Tabelas}
+
+\begin{table}[H]
+  \centering
+  \caption{Endereçamento IP}   % nas tabelas a legenda vai em cima
+  \label{tab:enderecos}
+  \begin{tabular}{llll}
+    \toprule
+    \textbf{Router} & \textbf{Interface} & \textbf{IP privado} & \textbf{IP público} \\
+    \midrule
+    R1 & Lo0  & 10.1.1.1/32 & --- \\
+       & g1/0 & 10.1.2.1/30 & --- \\
+    R2 & Lo1  & ---         & 47.73.239.22/32 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Para tabelas que ocupam várias páginas usar \texttt{longtable}.
+
+\section{Código}
+
+\begin{lstlisting}[language=Java, caption={Exemplo de Web Service}, label={lst:exemplo}]
+@WebService
+public class Servico {
+    @WebMethod
+    public String ola(String nome) {
+        return "Olá, " + nome + "! Já funcionam acentos.";
+    }
+}
+\end{lstlisting}
+
+Código num ficheiro externo:
+\verb|\lstinputlisting[language=Python]{codigo/script.py}|.
+Configuração de um router, sem linguagem: \verb|\begin{lstlisting}...\end{lstlisting}|.
+
+\section{Equações}
+
+\begin{equation}
+  \label{eq:exemplo}
+  T = \frac{L}{R} = \frac{\SI{1500}{\byte}}{\SI{100}{\mega\bit\per\second}}
+\end{equation}
+
+Ver \cref{eq:exemplo}. Os acrónimos já usados aparecem curtos: \gls{bgp}, \gls{as}.
+Livro de referência:~\cite{kurose2021}.

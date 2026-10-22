@@ -1,0 +1,67 @@
+% !TEX root = ../main.tex
+% Capa: bloco azul Iscte (logótipo + título) e zona branca (autores, docente, data)
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+  \coordinate (azulfim) at ([yshift=-0.58\paperheight]current page.north west);
+
+  % bloco azul
+  \fill[corprincipal] (current page.north west) rectangle (azulfim -| current page.east);
+
+  % grelha de pontos a desvanecer (canto superior direito)
+  \foreach \x in {0,...,11} {
+    \foreach \y in {0,...,13} {
+      \pgfmathsetmacro{\op}{max(0, 0.30 - 0.025*\x - 0.012*\y)}
+      \fill[white, opacity=\op]
+        ([xshift={-1.6cm - \x*0.55cm}, yshift={-1.6cm - \y*0.55cm}]current page.north east)
+        circle (1.1pt);
+    }
+  }
+
+  % logótipo
+  \node[anchor=north west, inner sep=0]
+    at ([xshift=2.5cm, yshift=-2.4cm]current page.north west) {%
+    \IfFileExists{\ficheirologo}
+      {\includegraphics[width=5cm]{\ficheirologo}}
+      {\color{white}\Huge\bfseries iscte}};
+
+  % UC, título, subtítulo
+  \node[anchor=south west, inner sep=0, align=left, text width=16cm]
+    at ([xshift=2.5cm, yshift=1.8cm]azulfim) {%
+    {\color{azulclaro}\ttfamily\small > \curso\ /\ \uc\par}
+    \vspace{0.6cm}
+    {\color{white}\fontsize{30}{36}\selectfont\bfseries \titulo\par}
+    \vspace{0.4cm}
+    {\color{white}\Large \subtitulo\par}};
+
+  % autores
+  \node[anchor=north west, inner sep=0, align=left, text width=10cm]
+    at ([xshift=2.5cm, yshift=-1.5cm]azulfim) {%
+    {\color{corprincipal}\footnotesize\bfseries\textls[150]{AUTORES}%
+      \ifx\grupo\empty\else\ \ \textperiodcentered\ \ \textls[150]{\MakeUppercase{\grupo}}\fi\par}
+    \vspace{0.3cm}
+    \begin{tabular}{@{}l@{\hspace{1.2em}}l@{}}
+      \autores
+    \end{tabular}};
+
+  % docente e data
+  \node[anchor=north east, inner sep=0, align=right, text width=5.5cm]
+    at ([xshift=-2.5cm, yshift=-1.5cm]azulfim -| current page.east) {%
+    {\color{corprincipal}\footnotesize\bfseries\textls[150]{DOCENTE}\par}
+    \vspace{0.3cm}
+    \docente\par
+    \vspace{0.8cm}
+    {\color{corprincipal}\footnotesize\bfseries\textls[150]{DATA}\par}
+    \vspace{0.3cm}
+    \datarelatorio\par};
+
+  % rodapé
+  \draw[corprincipal, line width=1.5pt]
+    ([xshift=2.5cm, yshift=2.6cm]current page.south west) --
+    ([xshift=-2.5cm, yshift=2.6cm]current page.south east);
+  \node[anchor=north west, inner sep=0, font=\small, text=gray]
+    at ([xshift=2.5cm, yshift=2.3cm]current page.south west) {\escola};
+  \node[anchor=north east, inner sep=0, font=\small, text=gray]
+    at ([xshift=-2.5cm, yshift=2.3cm]current page.south east) {\anoletivo};
+\end{tikzpicture}
+\null
+\end{titlepage}

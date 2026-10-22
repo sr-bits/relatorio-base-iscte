@@ -1,0 +1,60 @@
+% !TEX root = ../main.tex
+% ============================================================================
+%  Pacotes
+% ============================================================================
+
+% --- Língua e tipografia ---------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, portuguese]{babel}   % a última é a língua principal
+\usepackage{csquotes}
+\usepackage[sfdefault]{plex-sans}       % IBM Plex Sans (texto)
+\usepackage[scale=0.95]{plex-mono}      % IBM Plex Mono (código, emails)
+% Alternativas (trocar a linha do plex-sans):
+%   \usepackage[sfdefault]{FiraSans}        % mais técnico/compacto
+%   \usepackage[default]{sourcesanspro}     % mais neutro
+%   \usepackage{plex-serif}                 % texto com serifa, mais clássico
+\usepackage{microtype}
+
+% --- Página -----------------------------------------------------------------
+\usepackage[a4paper, margin=2.5cm, headheight=15pt]{geometry}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[titles]{tocloft}
+\usepackage[nottoc, notbib]{tocbibind}
+
+% --- Figuras e tabelas ------------------------------------------------------
+\usepackage{xcolor}
+\usepackage{tikz}               % capa
+\usepackage{graphicx}
+\graphicspath{{imagens/}}       % \includegraphics{topologia} procura em imagens/
+\usepackage{float}              % permite [H]
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{pdfpages}           % \includepdf para anexar PDFs (ex.: enunciado)
+
+% --- Matemática, unidades, listas ------------------------------------------
+\usepackage{amsmath, amssymb}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}}
+\usepackage{enumitem}
+
+% --- Código -----------------------------------------------------------------
+\usepackage{listings}
+
+% --- Referências ------------------------------------------------------------
+% style=ieee (numérico, comum em engenharia). Para APA: style=apa
+\usepackage[backend=biber, style=ieee]{biblatex}
+
+% --- Ligações (hyperref perto do fim; glossaries depois dele) ---------------
+\usepackage{hyperref}
+\usepackage[nameinlink]{cleveref}
+\usepackage[acronym, toc, nonumberlist, nopostdot, nomain]{glossaries}
+\makenoidxglossaries            % não precisa de makeglossaries / perl

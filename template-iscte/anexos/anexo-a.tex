@@ -1,0 +1,20 @@
+% !TEX root = ../main.tex
+\anexo{Configurações completas}
+\label{anx:configuracoes}
+
+Nos anexos as figuras e tabelas ficam numeradas A.1, A.2, \ldots{} e as páginas
+A-1, A-2, \ldots
+
+\begin{lstlisting}[caption={Configuração do R1}]
+interface Loopback0
+ ip address 10.1.1.1 255.255.255.255
+!
+router ospf 1
+ network 10.0.0.0 0.255.255.255 area 0
+\end{lstlisting}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\linewidth]{example-image}
+  \caption{Figura num anexo}
+\end{figure}
