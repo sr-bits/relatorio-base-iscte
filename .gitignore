@@ -1,0 +1,23 @@
+# LaTeX build files (the main.pdf preview stays tracked)
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.lol
+*.lot
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.ist
+*.spl
